@@ -14,6 +14,17 @@ class LinkedList:
     def __init__(self):
         self.head = None
 
+    def insert(self, data):
+        newNode = Node(data)
+
+        if(self.head):
+            current = self.head
+            while(current.next):
+                current = current.next
+            current.next = newNode
+        else:
+            self.head = newNode
+
 
 #Uncomment to see Linked List with Single Node
 # LL = LinkedList()
